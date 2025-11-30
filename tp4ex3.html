@@ -163,6 +163,31 @@
                 <div class="sous-menu-item">Physique</div>
                 <div class="sous-menu-item">Biologie</div>
             </div>
-    <h1>hello</h1>
+            
+            <!-- Sous-menu Paramètre -->
+            <div class="sous-menu parametre">
+                <div class="sous-menu-item">Compte</div>
+                <div class="sous-menu-item">Confidentialité</div>
+                <div class="sous-menu-item">Apparence</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function afficherSousMenu(menu) {
+            // Désactiver tous les menus
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.sous-menu').forEach(sousMenu => {
+                sousMenu.classList.remove('active');
+            });
+            
+            // Activer le menu sélectionné
+            document.querySelector(`.menu-item.${menu}`).classList.add('active');
+            document.querySelector(`.sous-menu.${menu}`).classList.add('active');
+        }
+    </script>
 </body>
 </html>
